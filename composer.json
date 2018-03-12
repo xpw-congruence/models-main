@@ -1,0 +1,29 @@
+{
+  "name": "xpw-congruence/models-main",
+  "description": "Main models for congruence app.",
+  "type": "library",
+  "license": "BSD",
+  "authors": [
+    {
+      "name": "Mike Adrian",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^5.6 || ^7.0",
+    "zendframework/zend-stdlib": "~3.0"
+  },
+  "require-dev": {
+    "phpunit/PHPUnit": "~4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "XpwCongruence\\ModelsMain\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "XpwCongruenceTest\\ModelsMain\\": "test/"
+    }
+  }
+}
