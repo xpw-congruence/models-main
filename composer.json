@@ -12,7 +12,8 @@
   "require": {
     "php": "^5.6 || ^7.0",
     "zendframework/zend-stdlib": "~3.0",
-    "xpwales/xpwales-identity": "dev-master"
+    "xpwales/xpwales-identity": "dev-master",
+    "xpwales/xpwales-hash-id": "dev-master"
   },
   "require-dev": {
     "phpunit/PHPUnit": "~4.0"

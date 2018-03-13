@@ -6,13 +6,18 @@ use Zend\Stdlib\Guard\EmptyGuardTrait,
 	Zend\Stdlib\Guard\NullGuardTrait,
 	XpwCongruence\ModelsMain\Tenant\Exception,
 	Xpwales\Identity\IdentityAware\IdentityAwareInterface,
-	Xpwales\Identity\IdentityAware\IdentityAwareTrait;
+	Xpwales\Identity\IdentityAware\IdentityAwareTrait,
+	Xpwales\HashId\HashIdAwareInterface,
+	Xpwales\HashId\HashIdAwareTrait;
 
-class TenantModel implements IdentityAwareInterface
+class TenantModel implements
+	IdentityAwareInterface,
+	HashIdAwareInterface
 {
 	use EmptyGuardTrait,
 		NullGuardTrait,
-		IdentityAwareTrait;
+		IdentityAwareTrait,
+		HashIdAwareTrait;
 
 	/**
 	 * @var string
