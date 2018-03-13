@@ -17,7 +17,7 @@ class Tenant
 	private $name = null;
 
 	//
-	// Name
+	// Name accessors
 	//
 
 	/**
@@ -49,7 +49,7 @@ class Tenant
 		$this->guardAgainstEmpty(
 			$name,
 			'name',
-			'XpwCongruence\ModelsMain\Tenant\Exception\InvalidArgumuentException');
+			'XpwCongruence\ModelsMain\Tenant\Exception\InvalidArgumentException');
 
 		$this->name = $name;
 

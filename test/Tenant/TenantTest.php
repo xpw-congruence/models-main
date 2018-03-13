@@ -2,24 +2,62 @@
 
 namespace XpwCongruenceTest\ModelsMain\Tenant;
 
-use XpwCongruence\ModelsMain\Tenant\Tenant as TenantModel;
+use XpwCongruence\ModelsMain\Tenant\Tenant as TenantModel,
+	XpwCongruence\ModelsMain\Tenant\Exception\RuntimeException,
+	XpwCongruence\ModelsMain\Tenant\Exception\InvalidArgumentException;
 
 class TenantTest extends \PHPUnit_Framework_TestCase
 {
 	/**
-	 * Test name getter
+	 * @var TenantModel
 	 */
-	public function testNameGetter()
+	private $tenant = null;
+
+	/**
+	 * Setup
+	 */
+	public function setUp()
 	{
-		$tenant = new TenantModel();
-		$name   = 'test-name';
+		$this->tenant = new TenantModel();
+	}
 
-		$tenant->setName($name);
+	//
+	// Name accessors
+	//
 
-		$nameOut = $tenant->getName();
+	/**
+	 * Test name accessors
+	 */
+	public function testNameAccessors()
+	{
+		$name = 'test-name';
+
+		$this->tenant->setName($name);
+
+		$nameOut = $this->tenant->getName();
 
 		$this->assertEquals($name, $nameOut);
 
 	}//end func
+
+	/**
+	 * Test for exception on getting unset name
+	 * @expectedException RuntimeException
+	 */
+	public function testNameGetterException()
+	{
+		$this->tenant->getName();
+	}//end func
+
+	/**
+	 * Test for exception on setting empty name value
+	 * @expectedException InvalidArgumentException
+	 */
+	public function testNameSetterException()
+	{
+		$name = '';
+		$this->tenant->setName($name);
+	}//end func
+
 
 }//end class
