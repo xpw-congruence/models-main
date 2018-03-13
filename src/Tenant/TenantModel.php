@@ -4,12 +4,15 @@ namespace XpwCongruence\ModelsMain\Tenant;
 
 use Zend\Stdlib\Guard\EmptyGuardTrait,
 	Zend\Stdlib\Guard\NullGuardTrait,
-	XpwCongruence\ModelsMain\Tenant\Exception;
+	XpwCongruence\ModelsMain\Tenant\Exception,
+	Xpwales\Identity\IdentityAware\IdentityAwareInterface,
+	Xpwales\Identity\IdentityAware\IdentityAwareTrait;
 
-class TenantModel
+class TenantModel implements IdentityAwareInterface
 {
 	use EmptyGuardTrait,
-		NullGuardTrait;
+		NullGuardTrait,
+		IdentityAwareTrait;
 
 	/**
 	 * @var string
