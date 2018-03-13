@@ -2,7 +2,7 @@
   "name": "xpw-congruence/models-main",
   "description": "Main models for congruence app.",
   "type": "library",
-  "license": "BSD",
+  "license": "BSD-2-Clause",
   "authors": [
     {
       "name": "Mike Adrian",

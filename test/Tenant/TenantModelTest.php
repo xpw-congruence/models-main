@@ -30,9 +30,13 @@ class TenantModelTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function testNameAccessors()
 	{
-		$name = 'test-name';
+		$name         = 'test-name';
+		$fluentReturn = $this->tenant->setName($name);
 
-		$this->tenant->setName($name);
+		// Fluent test
+		$this->assertInstanceOf(
+			'XpwCongruence\ModelsMain\Tenant\TenantModel',
+			$fluentReturn);
 
 		$nameOut = $this->tenant->getName();
 
@@ -58,6 +62,5 @@ class TenantModelTest extends \PHPUnit_Framework_TestCase
 		$name = '';
 		$this->tenant->setName($name);
 	}//end func
-
 
 }//end class
