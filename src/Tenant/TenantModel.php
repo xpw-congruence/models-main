@@ -6,7 +6,7 @@ use Zend\Stdlib\Guard\EmptyGuardTrait,
 	Zend\Stdlib\Guard\NullGuardTrait,
 	XpwCongruence\ModelsMain\Tenant\Exception;
 
-class Tenant
+class TenantModel
 {
 	use EmptyGuardTrait,
 		NullGuardTrait;

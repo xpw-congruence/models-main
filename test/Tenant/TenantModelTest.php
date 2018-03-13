@@ -2,11 +2,11 @@
 
 namespace XpwCongruenceTest\ModelsMain\Tenant;
 
-use XpwCongruence\ModelsMain\Tenant\Tenant as TenantModel,
+use XpwCongruence\ModelsMain\Tenant\TenantModel as TenantModel,
 	XpwCongruence\ModelsMain\Tenant\Exception\RuntimeException,
 	XpwCongruence\ModelsMain\Tenant\Exception\InvalidArgumentException;
 
-class TenantTest extends \PHPUnit_Framework_TestCase
+class TenantModelTest extends \PHPUnit_Framework_TestCase
 {
 	/**
 	 * @var TenantModel
